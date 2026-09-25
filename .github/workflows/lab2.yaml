@@ -43,7 +43,11 @@ jobs:
 
       - name: Search for GitHub
         run: |
-          grep -i "GitHub" student.txt
+          if grep -qi "GitHub" student.txt; then
+            echo "GitHub found in student.txt"
+          else
+            echo "GitHub not found in student.txt"
+          fi
 
       - name: Create report
         run: |
