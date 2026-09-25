@@ -52,6 +52,14 @@ jobs:
       - name: Create report
         run: |
           echo "Student repository verification completed." > report.txt
+          echo "Student Name: saksham srivastava" >> report.txt
+          echo "Roll Number: S24CSEU1316" >> report.txt
+          echo "Repository: $GITHUB_REPOSITORY" >> report.txt
+          echo "Branch: $GITHUB_REF_NAME" >> report.txt
+          echo "Number of lines: $(wc -l < student.txt)" >> report.txt
+          echo "GitHub search completed." >> report.txt
+
+          echo "Report contents:"
           cat report.txt
 
       - name: Upload report
